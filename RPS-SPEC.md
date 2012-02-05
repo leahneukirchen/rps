@@ -1,4 +1,4 @@
-Ruby Packaging Standard, 0.5-draft
+Ruby Packaging Standard, 0.6-draft
 ==================================
 
 The aim of [this document](http://chneukirchen.github.com/rps) is
