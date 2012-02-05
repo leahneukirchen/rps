@@ -77,18 +77,19 @@ Each file in `core_ext/` SHOULD contain code that extends only one class.
 Each file in `core_ext/` SHOULD be named after the class it extends, e.g.
 `core_ext/string.rb` for String extensions.
 
-## Extensions
+## Compiled extensions
 
-Extensions are directories which contain a `extconf.rb`.
+Compiled extensions are directories which contain a `extconf.rb`.
 
-Extensions SHOULD reside in `ext/`.
+Compiled extensions SHOULD reside in `ext/`.
 
-Extensions SHOULD be buildable with `ruby extconf.rb; make`.
+Compiled extensions SHOULD be buildable with `ruby extconf.rb; make`.
 
 Files ending with `.so`, `.dylib`, `.bundle`, `.dll`, `.exe` are
 considered compiled extensions to be installed.
 
-Extensions SHOULD be installed into an architecture-specific directory.
+Complied extensions SHOULD be installed into an architecture-specific
+directory.
 
 ## Data files
 
