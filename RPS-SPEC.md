@@ -114,3 +114,4 @@ Tests SHOULD reside in `test/` or `spec/`.
 * 10apr2010: Fix binary permissions.
 * 10apr2010: Add data files.
 * 11apr2010: Formatting, more detail on Extensions and Data files.
+* 05feb2012: Describe extensions to Ruby core classes.
