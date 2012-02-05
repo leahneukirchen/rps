@@ -64,6 +64,19 @@ Executable files SHOULD NOT end with `.rb`.
 
 Executable files SHOULD be installed with mode 0755.
 
+## Extensions to core classes
+
+Extensions to core classes are methods that extend the Ruby core classes like
+String or Array.
+
+Extensions to core classes MUST reside in the `core_ext/` subdirectory of the
+library directory, e.g. `lib/foo/core_ext/`.
+
+Each file in `core_ext/` SHOULD contain code that extends only one class.
+
+Each file in `core_ext/` SHOULD be named after the class it extends, e.g.
+`core_ext/string.rb` for String extensions.
+
 ## Extensions
 
 Extensions are directories which contain a `extconf.rb`.
