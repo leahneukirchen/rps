@@ -1,4 +1,4 @@
-Ruby Packaging Standard, 0.5-draft
+Ruby Packaging Standard, 0.6-draft
 ==================================
 
 The aim of [this document](http://chneukirchen.github.com/rps) is
@@ -64,18 +64,32 @@ Executable files SHOULD NOT end with `.rb`.
 
 Executable files SHOULD be installed with mode 0755.
 
-## Extensions
+## Extensions to core classes
 
-Extensions are directories which contain a `extconf.rb`.
+Extensions to core classes are methods that extend the Ruby core classes like
+String or Array.
 
-Extensions SHOULD reside in `ext/`.
+Extensions to core classes MUST reside in the `core_ext/` subdirectory of the
+library directory, e.g. `lib/foo/core_ext/`.
 
-Extensions SHOULD be buildable with `ruby extconf.rb; make`.
+Each file in `core_ext/` SHOULD contain code that extends only one class.
+
+Each file in `core_ext/` SHOULD be named after the class it extends, e.g.
+`core_ext/string.rb` for String extensions.
+
+## Compiled extensions
+
+Compiled extensions are directories which contain a `extconf.rb`.
+
+Compiled extensions SHOULD reside in `ext/`.
+
+Compiled extensions SHOULD be buildable with `ruby extconf.rb; make`.
 
 Files ending with `.so`, `.dylib`, `.bundle`, `.dll`, `.exe` are
 considered compiled extensions to be installed.
 
-Extensions SHOULD be installed into an architecture-specific directory.
+Complied extensions SHOULD be installed into an architecture-specific
+directory.
 
 ## Data files
 
@@ -100,3 +114,4 @@ Tests SHOULD reside in `test/` or `spec/`.
 * 10apr2010: Fix binary permissions.
 * 10apr2010: Add data files.
 * 11apr2010: Formatting, more detail on Extensions and Data files.
+* 05feb2012: Describe extensions to Ruby core classes.
